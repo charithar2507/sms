@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student management system</title>
+    <style>
+          body {
+            font-family: Arial;
+            background: #f2f2f2;
+        }
+        form {
+            width: 350px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return validateForm()">  
+        <h2>Student Management System</h2>
+        <form onsubmit="return validateForm()">
+        <h6>Name :</h6>
+        <input type="text" id="name" placeholder="Full Name"><br>
+        <h6>Roll Number :</h6>
+        <input type="text" id="roll" placeholder="Roll Number"><br>
+        <h6>Section :</h6>
+        <input type="text" id="section" placeholder="Section"><br>
+
+       
+        <button type="submit">Submit</button>
+</form>
+
+<script>
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var roll = document.getElementById("roll").value;
+        var section = document.getElementById("section").value;
+
+        if (name === "" || roll === "" || section === "") {
+            alert("Please fill in all fields.");
+            return false;
+        }
+        
+        alert("Form submitted successfully!");
+        return true;
+    }
+    </script>   
+    
+
+</body>
+</html>
